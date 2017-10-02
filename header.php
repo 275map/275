@@ -24,45 +24,55 @@
 
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
+			<div>
+				<h1 style="margin: 0;"><?php
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+					if ( has_custom_logo() ) {
+							echo '<img src="'. esc_url( $logo[0] ) .'" alt="'. get_bloginfo( 'name' ) .'">';
+					} else {
+							echo get_bloginfo( 'name' );
+					}
+				?></h1>
+			</div>
+			<div>
+				<a class="btn-search" href="#search-dialog" title="<?php _e( 'Search', 'smallblog' ); ?>"
+				data-search-dialog="true">
+					<span class="icon-search"></span>
+					<span class="screen-reader-text"><?php _e( 'Search', 'smallblog' ); ?></span>
+				</a>
+				<?php
+				$ods_menu = array(
+					'theme_location' => 'primary',
+					'menu'           => '',
+					'container'      => false,
+					'menu_class'     => 'nav navbar-nav',
+					'menu_id'        => '',
+					'echo'           => true,
+					'fallback_cb'    => 'wp_page_menu',
+					'before'         => '',
+					'after'          => '',
+					'link_before'    => '',
+					'link_after'     => '',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s" >%3$s</ul>',
+					'depth'          => 2,
+					'walker'         => ''
+				);
 
-            <?php if ( function_exists( 'ods_add_brand' ) ) ods_add_brand(); ?>
-
-            <a class="btn-search" href="#search-dialog" title="<?php _e( 'Search', 'smallblog' ); ?>"
-               data-search-dialog="true">
-                <span class="icon-search"></span>
-                <span class="screen-reader-text"><?php _e( 'Search', 'smallblog' ); ?></span>
-            </a>
-            <?php
-            $ods_menu = array(
-                'theme_location' => 'primary',
-                'menu'           => '',
-                'container'      => false,
-                'menu_class'     => 'nav navbar-nav',
-                'menu_id'        => '',
-                'echo'           => true,
-                'fallback_cb'    => 'wp_page_menu',
-                'before'         => '',
-                'after'          => '',
-                'link_before'    => '',
-                'link_after'     => '',
-                'items_wrap'     => '<ul id="%1$s" class="%2$s" >%3$s</ul>',
-                'depth'          => 2,
-                'walker'         => ''
-            );
-
-            if ( has_nav_menu( 'primary' ) ) :
-                ?>
-                <div id="menu" class="collapse navbar-collapse navbar-right">
-                    <?php wp_nav_menu( $ods_menu ); ?>
-                </div>
-                <div class="btn-trigger">
-                    <a href="#" class="trigger" data-off-canvas="true" data-off-canvas-id="#navigation"
-                       title="<?php _e( 'Menu', 'smallblog' ); ?>">
-                        <span class="ico"></span>
-                        <span class="screen-reader-text"><?php _e( 'Menu', 'smallblog' ); ?></span>
-                    </a>
-                </div>
-            <?php endif; ?>
+				if ( has_nav_menu( 'primary' ) ) :
+					?>
+					<div id="menu" class="collapse navbar-collapse navbar-right">
+						<?php wp_nav_menu( $ods_menu ); ?>
+					</div>
+					<div class="btn-trigger">
+						<a href="#" class="trigger" data-off-canvas="true" data-off-canvas-id="#navigation"
+						title="<?php _e( 'Menu', 'smallblog' ); ?>">
+							<span class="ico"></span>
+							<span class="screen-reader-text"><?php _e( 'Menu', 'smallblog' ); ?></span>
+						</a>
+					</div>
+				<?php endif; ?>
+			</div>
         </div>
     </div>
 </header>

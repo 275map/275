@@ -126,3 +126,11 @@ figure
 	border-bottom: 1px solid #cccccc;
 	font-weight: 900;
 }
+
+#header .container
+{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+}

@@ -1,44 +1,5 @@
 <?php
 
-
-/**
- * Add a brand.
- *
- * @param string $ods_img_src
- */
-function ods_add_brand( $ods_img_src = 'ods_logo_src' )
-{
-
-    $ods_brand = array(
-        'img_src'    => esc_url( get_theme_mod( $ods_img_src ) ),
-        'link'       => esc_url( home_url( '/' ) ),
-        'title'      => esc_attr( get_bloginfo( 'name', 'display' ) ),
-        'name'       => get_bloginfo( 'name', 'display' ),
-        'class'      => esc_url( get_theme_mod( $ods_img_src ) ) ? 'logo' : 'navbar-brand',
-        'tag_before' => is_home() ? '<h1 class="entry-title">' : '<div class="entry-title">',
-        'tag_after'  => is_home() ? '</h1>' : '</div>',
-        'color'      => '#' . get_header_textcolor()
-    );
-
-    $tpl = $ods_brand[ 'tag_before' ];
-    $tpl .= '<a class="' . $ods_brand[ 'class' ] . '" href="' . $ods_brand[ 'link' ] . '" title="' . $ods_brand[ 'title' ] . '"  style="color:' . $ods_brand[ 'color' ] . ';" >';
-
-    if ( empty( $ods_brand[ 'img_src' ] ) ):
-        $tpl .= $ods_brand[ 'name' ];
-    else:
-        $tpl .= '<figure style="background-image: url(' . $ods_brand[ 'img_src' ] . ');">';
-        $tpl .= '<img class="img-responsive" src="' . $ods_brand[ 'img_src' ] . '" alt="' . $ods_brand[ 'title' ] . '"/></figure>';
-        $tpl .= '</figure>';
-    endif;
-
-    $tpl .= '</a>';
-    $tpl .= $ods_brand[ 'tag_after' ];
-
-    echo $tpl;
-
-}
-
-
 /**
  * Create the excerpt shortcode
  *
