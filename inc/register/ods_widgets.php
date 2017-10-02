@@ -38,6 +38,15 @@ class odsWidgets
             'after_title'   => '</h2>',
         ) );
 
+        register_sidebar( array(
+            'name'          => __( 'Footer', 'smallblog' ),
+            'id'            => 'sidebar-2',
+            'description'   => __( 'These widgets appear on the footer.' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
     }
 
 }

@@ -133,4 +133,29 @@ figure
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
+	height: 120px;
+}
+
+.navbar:before, .navbar:after
+{
+	display: none;
+}
+
+#section
+{
+	padding-top: 120px;
+}
+
+#footer .f-top .footer-quote
+{
+	display: flex;
+	justify-content: space-between;
+	height: 120px;
+	max-width: 100% ;
+	color: #ffffff;
+}
+
+#footer .f-top .footer-quote a
+{
+	color: #ffffff;
 }

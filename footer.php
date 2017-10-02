@@ -11,7 +11,7 @@
 	<div class="f-top">
 		<div class="container">
 			<div class="footer-quote">
-				<div class="body" style="font-size: 24px;"><?php if ( function_exists( 'hello_dolly' ) ) { hello_dolly(); } ?></div>
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
 			</div>
 		</div>
 	</div>
@@ -23,9 +23,7 @@
 		</a>
 
 		<div class="container">
-			<span class="copyright">
-
-			</span>
+			<span class="copyright">Copyright © 2017 草津まちづくりマップ All rights Reserved.</span>
 		</div>
 	</div>
 </footer>

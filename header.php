@@ -24,8 +24,8 @@
 
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-			<div>
-				<h1 style="margin: 0;"><?php
+			<div style="margin-right: 40px;">
+				<h1 style="margin: 0;"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
 					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 					if ( has_custom_logo() ) {
@@ -33,7 +33,7 @@
 					} else {
 							echo get_bloginfo( 'name' );
 					}
-				?></h1>
+				?></a></h1>
 			</div>
 			<div>
 				<a class="btn-search" href="#search-dialog" title="<?php _e( 'Search', 'smallblog' ); ?>"
