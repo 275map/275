@@ -1,0 +1,128 @@
+/*
+Theme Name: 275
+Theme URI: https://275.net/
+Author: Takayuki Miyauchi
+Author URI: https://miya.io/
+*/
+
+
+
+.social-icons-lists.icons-background-rounded .socicon
+{
+	background-color: #dedede !important;
+	color: #555555;
+}
+
+#header .entry-title a
+{
+	color: #555555 !important;
+}
+
+ul.social-icons-lists
+{
+	padding: 0;
+}
+
+.sharedaddy
+{
+	margin-top: 3em;
+}
+
+a:focus
+{
+	outline: none;
+}
+
+figure
+{
+	width: 100%;
+	height: auto;
+	margin: 1em auto;
+}
+
+#banner .box-wrapper
+{
+	position: absolute;
+	left: 40px;
+	bottom: 40px;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+#banner .box h2
+{
+	line-height: 1.2em;
+}
+
+#banner .box h3
+{
+	line-height: 1.5em;
+}
+
+@media screen and ( max-width: 768px )
+{
+	.masonry-gallery
+	{
+		column-count: 3 !important;
+		-moz-column-count: 3 !important;
+	}
+
+	#banner .box-wrapper
+	{
+		position: absolute;
+		padding: 0 20px;
+		left: 0;
+		bottom: 20px;
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	#banner
+	{
+		background-position: right center;
+	}
+
+	#banner .box h2
+	{
+		font-size: 32px;
+	}
+
+	#banner .box h3
+	{
+		font-size: 12px;
+		line-height: 1.5em;
+	}
+}
+
+.the-content
+{
+	word-wrap: break-word;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.the-content h2
+{
+	background-color: #f5f5f5;
+	padding: 20px;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	font-size: 180%;
+	border-left: 20px solid #e36c39;
+	font-weight: 900;
+}
+
+.the-content h3
+{
+	padding: 20px 0;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	font-size: 140%;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	font-weight: 900;
+}
