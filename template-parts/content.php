@@ -13,8 +13,6 @@
 	<div class="the-content">
 		<?php if ( is_single() ) : ?>
 			<?php the_content(); ?>
-		<?php else: ?>
-			<?php echo wp_filter_nohtml_kses( get_the_excerpt() ); ?>
 		<?php endif; ?>
 	</div>
 	<hr class="separator"/>
