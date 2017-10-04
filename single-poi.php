@@ -28,9 +28,9 @@ get_header(); ?>
 						<div class="the-content">
 							<?php if ( is_single() ) : ?>
 							<?php if ( has_post_thumbnail() ) : ?>
-								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+								<div style="margin-bottom: 1em;"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 									<?php the_post_thumbnail(); ?>
-								</a>
+								</a></div>
 								<?php endif; ?>
 								<?php the_content(); ?>
 							<?php endif; ?>
